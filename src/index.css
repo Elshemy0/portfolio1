@@ -75,3 +75,14 @@ body {
   background-color: var(--background-950);
   font-family: "Roboto", sans-serif;
 }
+
+
+::-webkit-scrollbar {
+  width: 5px; 
+  background-color: var(--text-900);
+}
+
+/* المقبض */
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-400);
+}
