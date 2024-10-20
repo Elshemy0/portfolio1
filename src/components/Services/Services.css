@@ -1,0 +1,101 @@
+section#services {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../Hero/download.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    position: relative;
+    opacity: 0;
+    top: 50px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--text-100), transparent);
+    position: absolute;
+    top: 0;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        top: 50px;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+
+section#services span {
+    color: var(--text-100);
+}
+
+section#services .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+section#services .head span:first-child, section#services .head span:last-child {
+    width: 30%;
+    background-color: var(--secondary-500);
+    display: inline-block;
+    height: 1px;
+}
+
+section#services .head span:nth-child(2) {
+    font-weight: 500;
+    background-color: var(--secondary-500);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.servicesContent {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.servicesContent .theServices {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.servicesContent .theServices .service {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: var(--text-100);
+    padding: 20px 40px;
+    border: 2px solid white;
+    cursor: pointer;
+    background: linear-gradient(to bottom, var(--accent-900), transparent, var(--accent-500));
+    transition: .3s;
+}
+
+.servicesContent .theServices .service:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 750px) {
+    .servicesContent div#anim svg {
+        display: none
+    }
+}

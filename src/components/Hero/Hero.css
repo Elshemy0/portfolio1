@@ -1,0 +1,145 @@
+
+
+@keyframes view {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section#home img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.container .content .text h1 {
+    color: var(--text-100);
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 3.5rem;
+}
+
+.socials a svg {
+    transition: .3s;
+}
+
+.socials a svg:hover {
+    transform: scale(1.2);
+}
+
+.container .content .buttons {
+    display: flex;
+}
+
+.container .content .buttons button {
+    margin-right: 15px;
+    padding: 15px 30px;
+    border-radius: 99999px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+
+.container .content .buttons button:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-950);
+    color: var(--text-100);
+    transition: .3s;
+}
+
+.container .content .buttons button:first-child span {
+    transition: .3s;
+}
+
+.container .content .buttons button:first-child:hover span {
+    margin-left: 10px;
+}
+
+.container .content .buttons button:first-child::after {
+    content: '';
+    position: absolute;
+    width: 103%;
+    border-radius: 999999px;
+    height: 108%;
+    background-image: linear-gradient(90deg, var(--accent-600), var(--secondary-400));
+    z-index: -1;
+}
+
+.container .content .buttons button:first-child:hover::after {
+    background-image: linear-gradient(90deg, var(--secondary-400), var(--accent-600));
+}
+
+.container .content .buttons button:last-child {
+    background-image: linear-gradient(90deg, var(--accent-600), var(--secondary-400));
+    color: var(--text-100);
+    transition: .3s;
+}
+
+.container .content .buttons button:last-child:hover {
+    padding: 15px 30px;
+}
+
+.container .content .buttons button:last-child span {
+    transition: .3s;
+}
+
+.container .content .buttons button:last-child:hover span {
+    margin-left: 10px;
+}
+
+.code {
+    padding: 10px 20px;
+    background-color: var(--background-900);
+    border-radius: 5px;
+    height: fit-content;
+    width: 500px;
+    font-size: 15px;
+    color: var(--text-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+}
+
+
+.willMargin {
+    margin-left: 15px;
+}
+
+
+
+@media (max-width: 650px) {
+    .container .content .text h1 {
+        font-size: 40px;
+    }   
+    
+.container .content .buttons button {
+    padding: 15px 20px;
+}
+}

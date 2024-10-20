@@ -1,0 +1,147 @@
+nav {
+    position: sticky;
+    z-index: 99999999;
+    top: 0;
+}
+
+
+nav .navPC {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 130px;
+    background-color: rgba(51, 58, 44, .5);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+}
+
+nav .navPC .logo a {
+    font-size: 30px;
+    color: var(--text-100);
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav .navPC .links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .navPC .links ul li a {
+    text-decoration: none;
+    color: var(--text-100);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    padding: 0px 5px;
+    overflow: hidden;
+}
+
+nav .navPC .links ul li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-300);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+nav .navPC .links ul li a:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+
+nav .navMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+    background-color: rgba(51, 58, 44, .5);    
+    z-index: 999;
+    backdrop-filter: blur(10px);
+}
+
+nav .navMobile .logo a {
+    font-size: 30px;
+    color: var(--text-100);
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+nav .navMobile .menu .links {
+    width: 100%;
+    height: 500px; 
+    left: 0;
+    top: 130px;
+    position: absolute;
+    background-color: rgba(51, 58, 44, 1);    
+    animation: view .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .navMobile .menu .links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+nav .navMobile .menu .links ul li a {
+    text-decoration: none;
+    color: var(--text-100);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    padding: 0px 5px;
+    overflow: hidden;
+}
+
+
+
+
+nav .navMobile .menu .links {
+    display: none;
+}
+nav .navMobile .menu .links.active {
+    display: flex;
+}
+
+nav .navMobile {
+    display: none;
+}
+
+@keyframes view {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    nav .navPC {
+        display: none;
+    }
+    
+nav .navMobile {
+    display: flex;
+}
+
+}
